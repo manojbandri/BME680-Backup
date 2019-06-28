@@ -1,0 +1,27 @@
+{
+  "name": "bme680",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "install": "node-pre-gyp install --fallback-to-build"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.110.0"
+  },
+  "dependencies": {
+    "nan": "^2.10.0",
+    "bindings": "^1.3.0",
+    "node-pre-gyp": "^0.6.36"
+  },
+  "bundledDependencies": [
+    "node-pre-gyp"
+  ],
+  "binary": {
+    "module_name": "bme680",
+    "module_path": "./lib/binding/",
+    "remote_path": "./{module_name}/v{version}",
+    "package_name": "{node_abi}-{platform}-{arch}.tar.gz",
+    "host": "https://origin-node-pre-gyp.s3.amazonaws.com"
+  }
+}
